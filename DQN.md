@@ -3,6 +3,7 @@ title: "Deep Reinforcement Learning paper notes"
 permalink: /
 layout: default
 ---
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 ## 论文内容记录
 The environment(or emulator) is The Arcade Learning Environment.
@@ -12,7 +13,7 @@ The environment(or emulator) is The Arcade Learning Environment.
 
 论文中采用的是像素级别的强化学习进行的训练，通过记录整个屏幕的图像来进行训练，通过观察其中的动作数值以及状态数值的序列来进行的相关的游戏策略的设计。所有的游戏策略是一个有限的时间步长就可以实现的过程，通过MDP将每个序列作为一个确定的状态来进行马尔可夫决策过程规划的解决方法，来进行奖励的计算。每个智能体的目标均为利用模拟器来获取未来能够获取最大奖励函数的动作。我们通过定义可以选择的动作价值函数Q,通过动作价值函数来确定要采用的策略$\pi$,即采取的连续动作序列。
 
-在动作价值函数的设置过程中，遵循的方程为贝尔曼最优方程。
+在动作价值函数的设置过程中，遵循的方程为贝尔曼最优方程。在迭代次数$i->\infin$的过程中，会出现Q=Q\*结果，即最终会收敛到最优动作价值函数Q*。由于每一个序列都是相互独立的，而并非是什么不断延续下去的结果，因此我们只能通过函数拟合的方法，来构造函数$Q(s,a,\theta)\approx Q(s,a)$。
 
 ## Formula Record
 
