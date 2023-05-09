@@ -2,6 +2,7 @@
 title: "Deep Reinforcement Learning paper notes"
 permalink: /
 layout: default
+theme: cayman
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
